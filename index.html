@@ -130,12 +130,35 @@ footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;col
 footer a{color:var(--cor-primaria);text-decoration:underline}
 .text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
 @media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 32px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}.bonus-grid img{width:100%}}
+
+.preco-riscado{font-size:16px;color:var(--cinza-texto);text-decoration:line-through;font-weight:600}
+.selo-seguranca{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.selo-seguranca span{display:inline-flex;align-items:center;gap:4px;background:var(--cor-primaria-clara);padding:5px 12px;border-radius:999px;font-weight:700;color:var(--cor-primaria-hover);font-size:11.5px}
+.cta-preco-mini{font-size:13.5px;color:var(--cinza-texto);margin-bottom:10px;text-align:center}
+.cta-preco-mini strong{color:var(--cor-primaria);font-size:16px}
+.lista-cta-wrap{text-align:center;margin-top:28px}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:var(--cor-escura);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.25);transform:translateY(120%);transition:transform 0.3s ease}
+.sticky-bar.visivel{transform:translateY(0)}
+.sticky-bar-preco{color:var(--branco);font-family:'Montserrat',sans-serif;line-height:1.2}
+.sticky-bar-preco small{display:block;font-size:10px;color:rgba(255,255,255,0.55);text-decoration:line-through}
+.sticky-bar-preco strong{font-size:18px;color:var(--cor-brilho)}
+.sticky-bar .btn-cta{width:auto;padding:12px 20px;font-size:12.5px;max-width:none;flex-shrink:0}
+.exit-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.78);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
+.exit-overlay.ativo{display:flex}
+.exit-modal{background:var(--branco);border-radius:16px;max-width:420px;width:100%;padding:36px 28px 28px;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.exit-close{position:absolute;top:10px;right:14px;font-size:24px;color:var(--cinza-texto);cursor:pointer;background:none;border:none;line-height:1}
+.exit-modal h3{font-size:22px;font-weight:900;color:var(--preto);margin-bottom:10px}
+.exit-modal p{font-size:14px;color:var(--cinza-texto);margin-bottom:18px;line-height:1.6}
+.exit-precos{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-bottom:18px}
+.exit-precos .de{font-size:16px;color:var(--cinza-texto);text-decoration:line-through}
+.exit-precos .por{font-size:34px;font-weight:900;color:var(--cor-primaria);font-family:'Montserrat',sans-serif}
+.exit-cupom{background:var(--cor-primaria-clara);border:1px dashed var(--cor-primaria);border-radius:8px;padding:10px;font-family:'Montserrat',sans-serif;font-weight:800;color:var(--cor-primaria-hover);margin-bottom:20px;letter-spacing:0.5px;font-size:13px}
+.exit-recusar{display:block;margin:14px auto 0;font-size:12px;color:var(--cinza-texto);text-decoration:underline;cursor:pointer;background:none;border:none}
 </style>
 </head>
 <body>
 
-<div class="urgencia">🔥 Promoção encerra hoje — <span class="data-destaque" id="data-hoje"></span> Garanta agora antes que o preço volte!</div>
-<script>const _d=new Date();const _m=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];document.getElementById('data-hoje').textContent=_d.getDate()+'/'+_m[_d.getMonth()];</script>
+<div class="urgencia">🔥 Oferta expira em <span class="data-destaque" id="contador-urgencia">19:00</span> — garanta antes que o preço volte!</div>
 
 <section class="hero">
   <div class="container">
@@ -161,19 +184,12 @@ footer a{color:var(--cor-primaria);text-decoration:underline}
     <ul class="lista-itens">
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +35 Vídeos de Objetos Falantes para Podologia</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+6 Bônus totalmente grátis</li>
-            <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🦶 Pé cansado implorando por um cuidado especial hoje</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>✂️ Alicate de cutícula se gabando de deixar as unhas impecáveis</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🧴 Creme hidratante contando o segredo de pés macios por dias</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🪮 Lixa de pé avisando que acaba com toda aspereza do calcanhar</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>💅 Esmalte novo se orgulhando de deixar o resultado ainda mais bonito</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🦠 Unha encravada reclamando que precisa de atenção urgente</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🧼 Bacia de imersão contando que relaxar os pés é o primeiro passo</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔬 Lupa de precisão se gabando de identificar qualquer detalhe escondido</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🩹 Curativo pós-procedimento avisando que cuidado não pode faltar</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🦶 Calo teimoso se explicando por que insiste em voltar</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🧰 Kit de instrumentos esterilizados se orgulhando de máxima higiene</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>📸 Cliente satisfeita mostrando os pés renovados depois da sessão</li>
     </ul>
+    <div class="lista-cta-wrap"><a href="#planos" class="btn-cta">QUERO VER O PACOTE COMPLETO</a></div>
   </div>
 </section>
 
@@ -271,7 +287,7 @@ footer a{color:var(--cor-primaria);text-decoration:underline}
     <div class="plano-unico-wrap">
       <div class="plano">
         <span class="plano-badge">⭐ OFERTA ÚNICA</span>
-        <div class="plano-header"><h3>Pacote Completo</h3><div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$37,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div></div>
+        <div class="plano-header"><h3>Pacote Completo</h3><div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="preco-riscado">De R$67,90</p><p class="plano-valor">R$37,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div></div>
         <ul>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +35 Vídeos de Objetos Falantes para Podologia</li>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
@@ -283,6 +299,7 @@ footer a{color:var(--cor-primaria);text-decoration:underline}
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="var(--cor-brilho)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
         </ul>
         <a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta" style="max-width:100%;">SIM! QUERO MEU PACOTE AGORA!</a>
+        <div class="selo-seguranca"><span>🔒 Sem CPF</span><span>⚡ Checkout em 30s</span><span>✅ Pix seguro</span></div>
         <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
       </div>
     </div>
@@ -306,7 +323,7 @@ footer a{color:var(--cor-primaria);text-decoration:underline}
       <h3>Risco Zero — Garantia de 7 Dias</h3>
       <p>Confiamos tanto no pacote que você tem 7 dias de garantia incondicional. Não gostou? Basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
     </div>
-    <div class="text-center mt-32"><a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta">EU PRECISO COMPRAR AGORA MESMO!</a></div>
+    <div class="text-center mt-32"><p class="cta-preco-mini"><span class="preco-riscado">R$67,90</span> por <strong>R$37,90</strong> — sem CPF, Pix na hora</p><a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta">EU PRECISO COMPRAR AGORA MESMO!</a></div>
   </div>
 </section>
 
@@ -322,7 +339,7 @@ footer a{color:var(--cor-primaria);text-decoration:underline}
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não gostar? Tem garantia?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso ter equipamento profissional para gravar algo parecido?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já vêm prontos e editados. Você não precisa gravar, filmar ou editar nada — é só baixar o vídeo pronto e publicar nas suas redes.</div></div>
     </div>
-    <div class="text-center mt-32"><a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
+    <div class="text-center mt-32"><p class="cta-preco-mini"><span class="preco-riscado">R$67,90</span> por <strong>R$37,90</strong> — sem CPF, Pix na hora</p><a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
   </div>
 </section>
 
@@ -339,5 +356,65 @@ window.onload=()=>{document.querySelectorAll("a").forEach(link=>{if(link.href&&l
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','28152688191049877');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=28152688191049877&ev=PageView&noscript=1"/></noscript>
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-preco"><small>R$67,90</small><strong>R$37,90</strong></div>
+  <a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz" class="btn-cta">Garantir Pacote</a>
+</div>
+
+<div class="exit-overlay" id="exit-overlay">
+  <div class="exit-modal">
+    <button class="exit-close" onclick="fecharExitPopup()">&times;</button>
+    <h3>Espera! Antes de sair...</h3>
+    <p>Ganhe <strong>R$10 de desconto exclusivo</strong> se garantir seu pacote agora:</p>
+    <div class="exit-precos"><span class="de">R$37,90</span><span class="por">R$27,90</span></div>
+    <div class="exit-cupom">🎟️ Cupom SAIU10 já aplicado no link abaixo</div>
+    <a href="https://ggcheckout.app/checkout/44NcBF74Hwe1OQbYqiMz?coupon=SAIU10" class="btn-cta" style="max-width:100%;">Sim, quero o desconto!</a>
+    <button class="exit-recusar" onclick="fecharExitPopup()">Não, vou perder a oferta</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var el=document.getElementById('contador-urgencia');
+  if(el){
+    var end=Date.now()+19*60*1000;
+    function tick(){
+      var rest=Math.max(0,Math.floor((end-Date.now())/1000));
+      var m=String(Math.floor(rest/60)).padStart(2,'0');
+      var s=String(rest%60).padStart(2,'0');
+      el.textContent=m+':'+s;
+      if(rest>0) setTimeout(tick,1000);
+    }
+    tick();
+  }
+})();
+(function(){
+  var bar=document.getElementById('sticky-bar');
+  var hero=document.querySelector('.hero');
+  if(bar&&hero){
+    window.addEventListener('scroll',function(){
+      var show = window.scrollY > (hero.offsetTop + hero.offsetHeight);
+      bar.classList.toggle('visivel', show);
+    }, {passive:true});
+  }
+})();
+(function(){
+  var shown=false;
+  function abrir(){
+    if(shown) return;
+    if(sessionStorage.getItem('exitPopupShown')) return;
+    shown=true;
+    sessionStorage.setItem('exitPopupShown','1');
+    var ov=document.getElementById('exit-overlay');
+    if(ov) ov.classList.add('ativo');
+  }
+  document.addEventListener('mouseout',function(e){
+    if(!e.relatedTarget && e.clientY<10) abrir();
+  });
+  setTimeout(abrir, 45000);
+})();
+function fecharExitPopup(){var ov=document.getElementById('exit-overlay');if(ov)ov.classList.remove('ativo');}
+</script>
 </body>
 </html>
